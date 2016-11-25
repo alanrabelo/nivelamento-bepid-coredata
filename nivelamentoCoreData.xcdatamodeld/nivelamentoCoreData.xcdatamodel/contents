@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15A284" minimumToolsVersion="Automatic">
+    <entity name="Pergunta" representedClassName=".Pergunta" syncable="YES">
+        <attribute name="autor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="respostas" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Resposta" inverseName="pergunta" inverseEntity="Resposta" syncable="YES"/>
+    </entity>
+    <entity name="Resposta" representedClassName=".Resposta" syncable="YES">
+        <attribute name="conteudo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pergunta" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pergunta" inverseName="respostas" inverseEntity="Pergunta" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Pergunta" positionX="-3330" positionY="-2178" width="128" height="90"/>
+        <element name="Resposta" positionX="-3080" positionY="-2163" width="128" height="73"/>
+    </elements>
+</model>
